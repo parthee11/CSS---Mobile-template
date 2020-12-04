@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a { color:inherit; text-decoration: none; }
+li { list-style-type: none; }
+
+body {
+    background: rgb(0,0,0);
+    background: linear-gradient(230deg, rgb(52, 42, 109) 0%, rgb(75, 38, 207) 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone {
+    max-width: 320px;
+    width: 100%;
+    height: 620px;
+    background: rgb(46, 46, 46);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.12), 0 5px 7px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    border-left: 3px solid rgba($color: #fff, $alpha: 0.3);
+    border-right: 3px solid rgba($color: rgb(224, 224, 224), $alpha: 0.25);
+    &:hover {
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+    &-screen {
+        width: 300px;
+        height: 600px;
+        border-radius: 30px;
+        overflow-y: scroll;
+        // change background when required //
+        background: rgb(202, 202, 202);
+        // remove //
+        p {
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        // remove //
+    }
+    &-screen::-webkit-scrollbar {
+        background-color: transparent;
+    }
+    
+    &-screen::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    
+    &-screen::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+    .notch {
+        width: 55%;
+        height: 35px;
+        position: absolute;
+        background: rgb(46, 46, 46);
+        top: 0;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+        .camera-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: inherit;
+            position: relative;
+            .sensor {
+                width: 30%;
+                height: 7px;
+                background: rgb(20, 20, 20);
+                border-radius: 5px;
+                margin-top: 5px;
+                box-shadow: inset 1px 1px 3px rgba($color: #fff, $alpha: 0.1), inset -1px -1px 3px rgba($color: #000000, $alpha: 0.3);
+            }
+            .cam {
+                width: 14px;
+                height: 14px;
+                background: rgb(46,37,131);
+                background: radial-gradient(circle, rgba(46,37,131,1) 0%, rgb(15, 15, 15) 80%);
+                border-radius: 50%;
+                position: absolute;
+                right: 30px;
+                box-shadow: inset 1px 1px 1px rgba($color: #fff, $alpha: 0.2), inset -1px -1px 3px rgba($color: #000000, $alpha: 0.3);
+            }
+        }
+    }
+    .bottom-speaker {
+        width: 45%;
+        height: 5px;
+        position: absolute;
+        bottom: 25px;
+        background: rgb(15, 15, 15);
+        border-radius: 5px;
+    }
+    .buttons-left, .buttons-right {
+        position: absolute;
+        top: 70px;
+        div {
+            width: 6px;
+            background: rgba($color: #1b1b1b, $alpha: 1.0);
+        }
+    }
+    .buttons-left {
+        left: -8px;
+        div {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 2px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 2px;
+        }
+        .btn-short {
+            height: 30px;
+            margin-bottom: 1.5rem;
+        }
+        .btn-long {
+            height: 60px;
+            margin-bottom: 1.5rem;
+        }
+    }
+    .buttons-right {
+        right: -8px;
+        top: 100px;
+        .btn {
+            height: 75px;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+}
